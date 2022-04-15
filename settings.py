@@ -2,7 +2,7 @@
 
 #START = "convert GIFs and Videos to Video Stickers and create their Sticker Packs specific to you!"
 
-help = """
+KANG = """
 I can convert GIFs and Videos to Video Stickers. Just send me the sticker and I'll do the rest for you. 
 You will get your pack soon as you add a sticker. Send more gif/videos to add stickers in the current pack.
 
