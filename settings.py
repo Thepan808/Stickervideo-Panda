@@ -34,3 +34,9 @@ CUSTOM_USERS_TABLE = True
 REMOVE_ADDONS = ["must_join", "start", "help"]
 
 CMD_PREFIXES = ["/", "!", "."]
+
+ADDONS = [
+    "id",
+    "about",
+]
+
