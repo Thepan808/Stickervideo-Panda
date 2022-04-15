@@ -39,3 +39,5 @@ ADDONS = [
     "id",
 ]
 
+SET_BOT_MENU = False
+
