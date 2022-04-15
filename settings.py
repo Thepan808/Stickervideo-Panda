@@ -2,7 +2,7 @@
 
 #START = "convert GIFs and Videos to Video Stickers and create their Sticker Packs specific to you!"
 
-KANG = """
+#help = """
 I can convert GIFs and Videos to Video Stickers. Just send me the sticker and I'll do the rest for you. 
 You will get your pack soon as you add a sticker. Send more gif/videos to add stickers in the current pack.
 
@@ -20,10 +20,10 @@ You will get your pack soon as you add a sticker. Send more gif/videos to add st
 **Note**:
 1) Try to send as small video/gif as possible as only first 3 seconds matter!
 2) Don't try to care about audio as audio doesn't matter either! Same GIF and same Video without audio will give same result.
-3) 'Ask for emojis' in /settings overrides 'Custom Emojis'
+3) 'Ask for emojis' in /kang overrides 'Custom Emojis'
 """
 
-ABOUT = "convert gifs and videos to video stickers."
+#ABOUT = "convert gifs and videos to video stickers."
 
 #REPO = "VideoStickerBot"
 
@@ -31,12 +31,11 @@ STARKBOTS = False
 
 CUSTOM_USERS_TABLE = True
 
-REMOVE_ADDONS = ["must_join", "start", "help"]
+#REMOVE_ADDONS = ["must_join", "start", "help", "about"]
 
 CMD_PREFIXES = ["/", "!", "."]
 
 ADDONS = [
     "id",
-    "about",
 ]
 
