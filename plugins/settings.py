@@ -4,7 +4,7 @@ from pystark import Stark, Message
 from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
 
 
-@Stark.cmd('kang', description='Configure personal bot settings.', private_only=True)
+@Stark.cmd('kang', description='Definir configurações de bot pessoais.', private_only=True)
 async def settings(_, msg: Message):
     text, markup = await user_settings(msg.from_user.id)
     await msg.react(text, reply_markup=markup)
@@ -16,15 +16,15 @@ async def user_settings(user_id):
         return False, False
     tick = ' ✔'
     cross = ' ✖️ '
-    ask_emojis = "Ask for Emojis"
-    ask_emojis_msg = f"Set to True if you want the bot to ask for emojis that will be set to the video sticker while adding to pack. If set to False, all stickers will use default emoji, which is - {emoji.RED_HEART}"
-    get_webm = "Get WEBM"
-    get_webm_msg = f"Set to True if you want to get webm files when you send any existing video sticker. This way, you can add stickers from other people's packs using @Stickers. If False, bot will ignore the sticker."
-    kang_mode = "Kang Mode"
-    kang_mode_msg = "Set to True if you want to add stickers to your pack by just sending a video sticker from some existing pack. This way, you can add stickers from other people's packs to your pack. If False, bot will ignore the sticker."
-    default_emojis = "Default Emojis"
-    default_emojis_msg = f"Set default emojis to be used in your stickers. If nothing is set, {emoji.RED_HEART} will be used."
-    text = f'**Settings** \n\n'
+    ask_emojis = "Peça emojis"
+    ask_emojis_msg = f"Defina como True se quiser que o bot solicite emojis que serão definidos para o adesivo de vídeo ao adicionar ao pacote. Se definido como Falso, todos os adesivos usarão emoji padrão, que é - {emoji.RED_HEART}"
+    get_webm = "Pegue WEBM"
+    get_webm_msg = f"Defina como True se desejar obter arquivos webm ao enviar qualquer adesivo de vídeo existente. Dessa forma, você pode adicionar adesivos de pacotes de outras pessoas usando @Stickers. Se for False, o bot irá ignorar o adesivo."
+    kang_mode = "Kang Modo"
+    kang_mode_msg = "Defina como Verdadeiro se quiser adicionar adesivos ao seu pacote apenas enviando um adesivo de vídeo de algum pacote existente. Dessa forma, você pode adicionar adesivos de pacotes de outras pessoas ao seu pacote. Se for False, o bot irá ignorar o adesivo."
+    default_emojis = "Emojis padrão"
+    default_emojis_msg = f"Defina emojis padrão para serem usados ​​em seus adesivos. Se nada estiver definido, {emoji.RED_HEART} será usado."
+    text = f'**Definições** \n\n'
     ask_emojis_db = data['ask_emojis']
     get_webm_db = data['get_webm']
     kang_mode_db = data['kang_mode']
@@ -71,15 +71,15 @@ async def default_emojis_settings(user_id):
     data = data['default_emojis']
     if data:
         markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton('Change Emojis', callback_data="change_default_emojis")],
-            [InlineKeyboardButton('Remove Default Emojis', callback_data="remove_default_emojis")],
-            [InlineKeyboardButton('<-- Go Back', callback_data="back")],
+            [InlineKeyboardButton('Alterar emojis', callback_data="change_default_emojis")],
+            [InlineKeyboardButton('Remover emojis padrão', callback_data="remove_default_emojis")],
+            [InlineKeyboardButton('<-- Volte', callback_data="back")],
         ])
-        text = f'Current Default Emojis are `{data}` \n\nUse below buttons to change or remove them'
+        text = f'Os emojis padrão atuais são `{data}` \n\nUse os botões abaixo para alterá-los ou removê-los'
     else:
         markup = InlineKeyboardMarkup([
-            [InlineKeyboardButton('Add Emojis', callback_data="change_default_emojis")],
-            [InlineKeyboardButton('<-- Go Back', callback_data="back")],
+            [InlineKeyboardButton('Adicionar emojis', callback_data="change_default_emojis")],
+            [InlineKeyboardButton('<-- Volte', callback_data="back")],
         ])
-        text = 'Currently no Emojis are set. Use below button to add them.'
+        text = 'Atualmente nenhum Emoji está definido. Use o botão abaixo para adicioná-los.'
     return text, markup
