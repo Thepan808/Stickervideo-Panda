@@ -1,29 +1,13 @@
 # Project Settings
 
-#START = "convert GIFs and Videos to Video Stickers and create their Sticker Packs specific to you!"
+#START = "converta GIFs e vídeos em adesivos de vídeo e crie seus pacotes de adesivos específicos para você!"
 
 KANG = """
-I can convert GIFs and Videos to Video Stickers. Just send me the sticker and I'll do the rest for you. 
-You will get your pack soon as you add a sticker. Send more gif/videos to add stickers in the current pack.
-
-**Features**
-1) Personalized video sticker packs
-2) Multiple video sticker packs
-3) Video to WEBM
-4) Auto convert Video Sticker to WEBM
-5) Customizable Sticker Emojis
-6) Get list of packs using /packs
-7) Settings to differentiate emojis for each pack
-8) Kang mode to add stickers from other's packs
-9) Set Default Emojis for all stickers
-
-**Note**:
-1) Try to send as small video/gif as possible as only first 3 seconds matter!
-2) Don't try to care about audio as audio doesn't matter either! Same GIF and same Video without audio will give same result.
-3) 'Ask for emojis' in /kang overrides 'Custom Emojis'
+Posso converter GIFs e vídeos em adesivos de vídeo. Basta me enviar o adesivo e eu faço o resto para você.
+Você receberá seu pacote assim que adicionar um adesivo. Envie mais gif/vídeos para adicionar adesivos no seu pack
 """
 
-#ABOUT = "convert gifs and videos to video stickers."
+#ABOUT = "converter gifs e vídeos em adesivos de vídeo."
 
 #REPO = "VideoStickerBot"
 
